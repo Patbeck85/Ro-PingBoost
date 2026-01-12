@@ -40,6 +40,16 @@ Spieldatei von "Ragnarok+.exe" in "Ragnarokplus.exe" umbenennen.
      Packet Loss.
 4. Beenden: Schließe einfach das Spiel. Alle Änderungen werden automatisch 
    auf Windows-Standard zurückgesetzt.
+------------------------------------------------------------
+🌟 COMMUNITY & CREDITS
+------------------------------------------------------------
+
+Ein riesiges Dankeschön an das Ragnarok+ Team für die harte 
+Arbeit und an alle Spieler, die den Geist des Spiels am 
+Leben erhalten! Auf gute gemeinsame Stunden beim Grinden! ❤️
+
+
+============================================================
 
 ------------------------------------------------------------
 ENGLISH / ENGLISCH
@@ -81,4 +91,18 @@ $CONFIG section at the top:
 - ServerAddress = "138.201.124.56"
 - ServerPort = 5121
 
+
+------------------------------------------------------------
+🌟 COMMUNITY & CREDITS
+------------------------------------------------------------
+
+A huge shoutout to the Ragnarok+ Team for their hard work 
+and to all players for keeping the spirit alive! 
+Let's keep grinding together! ❤️
+
 ============================================================
+============================================================
+           RAGNAROK+ PINGBOOST TOOLKIT (v2026)
+============================================================
+
+
