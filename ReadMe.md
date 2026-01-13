@@ -1,88 +1,64 @@
-🇩🇪 DEUTSCH: RAGNAROK+ PINGBOOST QUICKGUIDE
-🚀 Was macht dieses Tool?
+# 🌀 Ragnarok+ | Network Optimizer Guide
 
-Dieses Tool optimiert deine Windows-Netzwerkeinstellungen speziell für Ragnarok Online. Es reduziert den "Input-Lag" durch Deaktivierung von Nagle's Algorithm (Delayed ACKs) und findet die perfekte Paketgröße (MTU), um Datenstau zu verhindern.
-🛠️ Einrichtung (Einmalig)
+> **⚠️ WICHTIG / IMPORTANT:**
+> Bitte benenne die Spieldatei von **`Ragnarok+.exe`** in **`Ragnarokplus.exe`** um!
+> Please rename your game file from **`Ragnarok+.exe`** to **`Ragnarokplus.exe`**!
 
-    Stelle sicher, dass alle Dateien im Ragnarok+ Spielordner liegen:
+---
 
-        RoPlusBoost.exe (Die Haupt-App)
+## 🇩🇪 DEUTSCH: Anleitung
 
-        monitor.ps1 (Das Gehirn)
+### 🚀 Was macht dieses Tool?
+Dieses Utility optimiert die Netzwerk-Antwortzeiten von Windows und verhindert Datenstau durch eine perfekte MTU-Kalibrierung. Es sorgt für einen minimalen Input-Lag während des Spielens.
 
-        MTU_Finder.bat (Der Kalibrierer)
+### 🛠️ Einrichtung (Einmalig)
+1.  Benenne die Spiel-EXE um (siehe oben).
+2.  Kopiere alle Dateien dieses Pakets in deinen **Ragnarok+ Spielordner**.
+3.  Führe die `MTU_Finder.bat` einmalig als **Administrator** aus.
+4.  Warte, bis der Test abgeschlossen ist und die Datei `mtu.cfg` erstellt wurde.
 
-    Starte die MTU_Finder.bat als Administrator.
+### 🎮 Spiel starten
+Nutze ab jetzt immer die **`R+PingBoost.exe`**, um das Spiel zu starten. Das Tool aktiviert die Optimierungen automatisch im Hintergrund.
 
-    Warte, bis der Test abgeschlossen ist. Er erstellt eine mtu.cfg. Fertig!
+### 📊 Ping-Status (Taskleiste)
+Ein Icon in deiner Taskleiste zeigt dir den Live-Ping:
+*   🟢 **Grün:** < 80ms (Perfekt)
+*   🟡 **Gelb:** 80-150ms (Akzeptabel)
+*   🔴 **Rot:** > 150ms (Lag / Verzögerung)
+*   ⚪ **"!!" Icon:** Verbindung unterbrochen oder Server antwortet nicht.
 
-🎮 Spiel starten
+---
 
-    Starte ab jetzt immer die RoPlusBoost.exe.
+## 🇺🇸 ENGLISH: Instructions
 
-    Das Tool fragt nach Admin-Rechten (nötig für die Netzwerk-Tweaks).
+### 🚀 Purpose
+This utility optimizes Windows network response times and prevents data congestion via perfect MTU calibration, ensuring minimum input lag while playing.
 
-    Das Spiel startet automatisch und die Optimierungen werden im Hintergrund aktiviert.
+### 🛠️ Setup (Once)
+1.  Rename the Game-EXE (see alert above).
+2.  Copy all files into your **Ragnarok+ Game Folder**.
+3.  Run `MTU_Finder.bat` as **Administrator** once.
+4.  Wait for the test to complete and the `mtu.cfg` file to be generated.
 
-📈 Das Tray-Icon (Taskleiste)
+### 🎮 How to Play
+Always launch the game via **`R+PingBoost.exe`**. The tool will apply all optimizations in the background automatically.
 
-Unten rechts bei der Uhr siehst du ein neues Icon mit deinem Live-Ping:
+### 📊 Ping Indicator (System Tray)
+An icon in your system tray shows your live ping:
+*   🟢 **Green:** < 80ms (Perfect)
+*   🟡 **Yellow:** 80-150ms (Average)
+*   🔴 **Red:** > 150ms (Heavy Lag)
+*   ⚪ **"!!" Icon:** Connection lost or server timeout.
 
-    🟢 Grün (< 80ms): Perfekte Verbindung.
+---
 
-    🟡 Gelb (80-150ms): Akzeptabel, leichter Delay.
+## ❤️ Danksagung | Special Thanks
 
-    🔴 Rot (> 150ms): Starker Lag oder Verbindungsprobleme.
+Ein riesiges Dankeschön an die gesamte **Community** und alle **Spieler**, die diese Welt zum Leben erwecken!
 
-    ⚪ "!!" Icon: Zeitüberschreitung (Server antwortet nicht).
+Besonderer Dank gilt den **Serverbetreibern & Administratoren** für ihre unermüdliche Arbeit, ihre Zeit und ihre Leidenschaft für dieses Projekt.
 
-Pro-Tipp: Rechtsklick auf das Icon für "Show Statistics", um Durchschnitts-Ping und Paketverlust zu prüfen.
-🛑 Beenden
+*A huge shoutout to the entire **community** and all **players**! Special thanks to the **server staff & administrators** for their hard work, dedication, and passion!*
 
-Wenn du das Spiel schließt, setzt das Tool deine Windows-Einstellungen automatisch wieder auf Standard zurück und beendet sich.
-🇺🇸 ENGLISH: RAGNAROK+ PINGBOOST QUICKGUIDE
-🚀 What does this tool do?
-
-This tool optimizes your Windows network stack specifically for Ragnarok Online. It eliminates input lag by disabling Nagle's Algorithm (Delayed ACKs) and finds the perfect packet size (MTU) to prevent data fragmentation.
-🛠️ Initial Setup (Once)
-
-    Ensure all files are located in your Ragnarok+ Game Folder:
-
-        RoPlusBoost.exe (The Main App)
-
-        monitor.ps1 (The Logic)
-
-        MTU_Finder.bat (The Calibrator)
-
-    Run MTU_Finder.bat as Administrator.
-
-    Wait for the test to finish. It will create mtu.cfg. Done!
-
-🎮 How to Play
-
-    From now on, always launch the game via RoPlusBoost.exe.
-
-    The tool will request Admin rights (required to apply network tweaks).
-
-    The game launches automatically, and optimizations are applied in the background.
-
-📈 The Tray Icon (Taskbar)
-
-Look for a colored circle with your live ping in the system tray (near the clock):
-
-    🟢 Green (< 80ms): Perfect connection.
-
-    🟡 Yellow (80-150ms): Playable, slight delay.
-
-    🔴 Red (> 150ms): Heavy lag or connection issues.
-
-    ⚪ "!!" Icon: Request Timed Out (No response from server).
-
-Pro-Tip: Right-click the icon and select "Show Statistics" to check your average ping and packet loss.
-🛑 Closing the Tool
-
-When you exit the game, the tool automatically reverts your Windows settings to default and closes itself.
-
-Hinweis / Note:
-Falls dein Antivirus das Tool blockiert, füge die RoPlusBoost.exe und monitor.ps1 zur Ausschlussliste hinzu.
-If your antivirus blocks the tool, add RoPlusBoost.exe and monitor.ps1 to the exclusion list.
+---
+*© Ragnarok+ Project | Developed for the community*
