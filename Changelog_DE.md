@@ -8,6 +8,14 @@ Alle wichtigen Änderungen an diesem Projekt werden in dieser Datei dokumentiert
 
 ### 🎉 Major Release - Stufe 1 Optimierungen
 
+#### Kompatibilität
+- **Windows 7 SP1 bis Windows 11** vollständig unterstützt
+- **Automatische Erkennung**: Script erkennt Windows-Version und passt sich an
+- **Fallback-Methoden**: Verwendet WMI auf Windows 7, moderne Cmdlets auf Windows 8+
+- **QoS Policy**: Nur Windows 8+, wird auf Windows 7 automatisch übersprungen
+- **DNS Cache**: Verwendet `ipconfig /flushdns` auf Windows 7, moderne Cmdlets auf Windows 8+
+- **Netzwerkadapter**: WMI-Fallback für Windows 7, Get-NetAdapter für Windows 8+
+
 #### Launcher Integration
 - **R+PingBoost.exe**: Automatischer Launcher der sowohl das Script als auch Ragnarok+ startet
 - **Automatischer Start**: Startet Ragnarok+ aus `Ragnarokplus.exe` (umbenannte `Ragnarok+.exe`)
@@ -102,6 +110,9 @@ Alle wichtigen Änderungen an diesem Projekt werden in dieser Datei dokumentiert
   - Custom Ping-Intervall
 
 ### [3.0] - Zukünftige Vision
+- [ ] **Multi-Game Support**:
+  - Profile für verschiedene Spiele
+  - Automatische Spiel-Erkennung
 - [ ] **Erweiterte Netzwerk-Analyse**:
   - Traceroute zum Server
   - Jitter-Messung
@@ -114,8 +125,13 @@ Alle wichtigen Änderungen an diesem Projekt werden in dieser Datei dokumentiert
 ## Bekannte Probleme & Fixes
 
 ### Version 2.0
+- ✅ **Windows 7 - 11 Kompatibilität**
+  - Automatische Windows-Versions-Erkennung
+  - Fallback auf WMI für Windows 7
+  - QoS Policy nur auf Windows 8+ (wird übersprungen auf Win7)
+  - Alle Kern-Optimierungen funktionieren auf allen Versionen
 - ✅ **IMPORTANT**: All files must be in Ragnarok+ folder
-  - R+PingBoost.exe, monitor.ps1, MTU_Finder.bat
+  - R+PingBoost.exe, RagnarokPingBoost.ps1, MTU_Finder.bat
   - Must be in same directory as Ragnarok+ game
   - Reason: Launcher needs to find and start game executable
 - ✅ **IMPORTANT**: Ragnarok+ executable must be renamed
@@ -159,7 +175,7 @@ Alle wichtigen Änderungen an diesem Projekt werden in dieser Datei dokumentiert
 
 ### Version 2.0 Entwicklung
 - Entwicklungszeit: 2 Tage
-- Testing: Windows 10/11 (22H2, 23H2)
+- Testing: Windows 7 SP1, 8.1, 10 (22H2, 23H2), 11
 - PowerShell Versionen: 5.1, 7.x
 - Netzwerk-Tests: DSL, Kabel, Glasfaser
 
@@ -168,11 +184,14 @@ Alle wichtigen Änderungen an diesem Projekt werden in dieser Datei dokumentiert
 - Backup vor jeder Systemänderung
 - Rollback garantiert durch Finally-Blocks
 - Logging für alle Operationen
+- **Windows-Versions-Erkennung** und automatische Anpassung
+- **Fallback-Methoden** für ältere Windows-Versionen
 
 ### Performance
 - CPU-Nutzung: <1% im Durchschnitt
 - RAM-Nutzung: ~15-20 MB
 - Disk I/O: Minimal (nur Logging)
+- **Getestet auf**: Windows 7, 8.1, 10, 11
 
 ---
 

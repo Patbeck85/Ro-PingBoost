@@ -33,16 +33,22 @@ Ragnarok+ PingBoost is an automated PowerShell tool that optimizes network conne
 ## 🚀 Installation & Usage
 
 ### Requirements
-- Windows 10/11 (or Windows Server 2016+)
-- PowerShell 5.1 or higher
+- **Windows 7 SP1 / 8 / 8.1 / 10 / 11** (or Windows Server 2008 R2+)
+- PowerShell 5.1 or higher (pre-installed on Windows 10/11)
+  - Windows 7: [PowerShell 5.1 Download](https://www.microsoft.com/download)
 - **Administrator rights** (required for Registry & QoS)
 - Ragnarok+ game installed
+
+**Note for Windows 7 users:**
+- QoS Policy only available on Windows 8+ (skipped on Win7)
+- All other optimizations work fully
+- PowerShell 5.1 may need to be installed manually
 
 ### Installation
 
 1. **Copy files to Ragnarok+ folder**
    - `R+PingBoost.exe` - Main launcher
-   - `monitor.ps1` - PowerShell script
+   - `RagnarokPingBoost.ps1` - PowerShell script
    - `MTU_Finder.bat` - MTU optimization tool (optional)
    - **IMPORTANT**: All files must be in the same folder as Ragnarok+!
    - Example: `C:\Games\Ragnarok+\` (where Ragnarok+.exe is located)
@@ -205,6 +211,7 @@ HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{GUID}
 ### Known Limitations
 - Requires administrator rights
 - Only works while Ragnarok+ is running
+- **Windows 7**: QoS Policy not available (Windows 8+ feature)
 - QoS works best with QoS-capable router
 - Some network adapters don't support all optimizations
 
@@ -231,6 +238,16 @@ HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{GUID}
 ```powershell
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 ```
+
+**PowerShell version too old (Windows 7)**
+- Download PowerShell 5.1: https://www.microsoft.com/download
+- Or install Windows Management Framework 5.1
+- After installation: Restart Windows
+
+**QoS Policy Error (Windows 7)**
+- Normal! QoS only available on Windows 8+
+- All other optimizations still work
+- Log shows: "QoS Policy nicht verfuegbar"
 
 **QoS Policy Error**
 - Check if Windows Firewall is active

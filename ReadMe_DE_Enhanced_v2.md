@@ -33,16 +33,22 @@ Ragnarok+ PingBoost ist ein automatisiertes PowerShell-Tool, das die Netzwerkver
 ## 🚀 Installation & Verwendung
 
 ### Voraussetzungen
-- Windows 10/11 (oder Windows Server 2016+)
-- PowerShell 5.1 oder höher
+- **Windows 7 SP1 / 8 / 8.1 / 10 / 11** (oder Windows Server 2008 R2+)
+- PowerShell 5.1 oder höher (auf Windows 10/11 bereits vorinstalliert)
+  - Windows 7: [PowerShell 5.1 Download](https://www.microsoft.com/download)
 - **Administrator-Rechte** (erforderlich für Registry & QoS)
 - Ragnarok+ Spiel installiert
+
+**Hinweis für Windows 7 Nutzer:**
+- QoS Policy ist nur auf Windows 8+ verfügbar (wird auf Win7 übersprungen)
+- Alle anderen Optimierungen funktionieren vollständig
+- PowerShell 5.1 muss ggf. nachinstalliert werden
 
 ### Installation
 
 1. **Dateien in Ragnarok+ Ordner kopieren**
    - `R+PingBoost.exe` - Haupt-Launcher
-   - `monitor.ps1` - PowerShell Script
+   - `RagnarokPingBoost.ps1` - PowerShell Script
    - `MTU_Finder.bat` - MTU-Optimierungs-Tool (optional)
    - **WICHTIG**: Alle Dateien müssen im gleichen Ordner wie Ragnarok+ sein!
    - Beispiel: `C:\Games\Ragnarok+\` (dort wo auch Ragnarok+.exe liegt)
@@ -207,6 +213,7 @@ HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{GUID}
 ### Bekannte Einschränkungen
 - Erfordert Administrator-Rechte
 - Funktioniert nur während Ragnarok+ läuft
+- **Windows 7**: QoS Policy nicht verfügbar (Windows 8+ Feature)
 - QoS funktioniert am besten mit QoS-fähigem Router
 - Einige Netzwerkadapter unterstützen nicht alle Optimierungen
 
@@ -233,6 +240,16 @@ HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{GUID}
 ```powershell
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 ```
+
+**PowerShell Version zu alt (Windows 7)**
+- Download PowerShell 5.1: https://www.microsoft.com/download
+- Oder Windows Management Framework 5.1 installieren
+- Nach Installation: Windows neu starten
+
+**QoS Policy Fehler (Windows 7)**
+- Normal! QoS ist nur auf Windows 8+ verfügbar
+- Alle anderen Optimierungen funktionieren trotzdem
+- Im Log steht: "QoS Policy nicht verfuegbar"
 
 **QoS Policy Fehler**
 - Prüfe ob Windows Firewall aktiv ist

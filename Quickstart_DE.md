@@ -1,5 +1,6 @@
 ================================================================================
     RAGNAROK+ PINGBOOST - SCHNELLSTART-ANLEITUNG
+    Windows 7 / 8 / 10 / 11 kompatibel
 ================================================================================
 
 🚀 IN 4 SCHRITTEN ZUM BESSEREN PING!
@@ -10,7 +11,7 @@ SCHRITT 0: DATEIEN IN RAGNAROK+ ORDNER KOPIEREN
 
 📁 Kopiere ALLE Dateien in deinen Ragnarok+ Installations-Ordner:
    - R+PingBoost.exe
-   - monitor.ps1
+   - RagnarokPingBoost.ps1
    - MTU_Finder.bat
 
    Beispiel: C:\Games\Ragnarok+\
@@ -114,6 +115,11 @@ HÄUFIGE FRAGEN
 ❓ Muss ich MTU_Finder jedes Mal ausführen?
    → Nein! Nur einmal, außer du wechselst Internet/Router/VPN
 
+❓ Funktioniert das auf Windows 7?
+   → JA! Vollständig kompatibel (außer QoS Policy)
+   → QoS ist nur ein kleiner Teil, Rest funktioniert!
+   → Eventuell PowerShell 5.1 nachinstallieren
+
 ❓ Muss ich Ragnarok+.exe wirklich umbenennen?
    → JA! Sehr wichtig! PowerShell funktioniert sonst nicht!
    → Umbenennen in: Ragnarokplus.exe (ohne +)
@@ -185,6 +191,6 @@ SUPPORT
 
 Viel Spaß und niedrigen Ping! 🎮🚀
 
-Wünsche ich der Ragnarok+ Community ❤️
+Die Ragnarok+ Community ❤️
 
 ================================================================================
